@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Component/Navbar";
 import Textform from "./Component/Textform";
@@ -30,37 +30,11 @@ function App() {
    };
    return (
       <>
-         <Router>
-            <Navbar mode={mode} toogle={toogle} />
-            <div className="container"></div>
 
-            <Switch>
-               <Route exact path="/privacy">
-                  <Privacy />
-               </Route>
-               <Route path="/c++">
-                  <Anny />
-               </Route>
+         <Navbar mode={mode} toogle={toogle} />
+         <div className="container"></div>
+         <Textform />
 
-               <Route exact path="/disclaimer">
-                  <Desc />
-               </Route>
-               <Route exact path="/term">
-                  <Term />
-               </Route>
-
-               <Route exact path="/about">
-                  <About />
-               </Route>
-               <Route exact path="/introo">
-                  <Intro />
-               </Route>
-
-               <Route path="/">
-                  <Textform />
-               </Route>
-            </Switch>
-         </Router>
       </>
    );
 }

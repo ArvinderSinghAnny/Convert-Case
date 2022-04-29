@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 export default function Navbar(props) {
    return (
       <>
@@ -24,57 +23,55 @@ export default function Navbar(props) {
                <div className="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                      <li className="nav-item">
-                        <Link className="nav-link active" aria-current="page" to="/">
+                        <a className="nav-link active" aria-current="page" href="/">
                            Home
-                        </Link>
+                        </a>
                      </li>
                      <li className="nav-item">
-                        <Link className="nav-link active" aria-current="page" to="/c++">
+                        <a className="nav-link active" aria-current="page" href="/c++">
                            C Tutorial
-                        </Link>
+                        </a>
                      </li>
 
                      <li className="nav-item">
-                        <Link className="nav-link active" aria-current="page" to="/about">
+                        <a className="nav-link active" aria-current="page" href="/about">
                            About
-                        </Link>
+                        </a>
                      </li>
 
                      <li className="nav-item">
-                        <Link
+                        <a
                            className="nav-link active"
                            aria-current="page"
-                           to="/privacy"
+                           href="/privacy"
                         >
                            Privacy policy
-                        </Link>
+                        </a>
                      </li>
                      <li className="nav-item">
-                        <Link className="nav-link active" aria-current="page" to="term">
+                        <a className="nav-link active" aria-current="page" href="term">
                            Terms & Condition
-                        </Link>
+                        </a>
                      </li>
                      <li className="nav-item">
-                        <Link
+                        <a
                            className="nav-link active"
                            aria-current="page"
-                           to="/disclaimer"
+                           href="/disclaimer"
                         >
                            Disclaimer
-                        </Link>
+                        </a>
                      </li>
                   </ul>
                </div>
 
                <div
-                  className={`form-check form-switch text-${
-                     props.mode === "light" ? "dark" : "light"
-                  }`}
+                  className={`form-check form-switch text-${props.mode === "light" ? "dark" : "light"
+                     }`}
                >
                   <input
-                     className={`form-check-input ${
-                        props.mode === "light" ? "dark" : "white"
-                     }`}
+                     className={`form-check-input ${props.mode === "light" ? "dark" : "white"
+                        }`}
                      type="checkbox"
                      id="flexSwitchCheckDefault"
                      onClick={props.toogle}

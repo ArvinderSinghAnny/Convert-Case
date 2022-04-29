@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
 export default function anny() {
    return (
       <div>
@@ -15,7 +13,7 @@ export default function anny() {
                <div class="col-md-3 ">
                   <ul>
                      <li>
-                        <Link to="/introo">Introduction</Link>
+                        <a href="/introo">Introduction</a>
                      </li>
                      <li>
                         <a href="#">Basic syntax </a>
